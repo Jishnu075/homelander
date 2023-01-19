@@ -8,13 +8,29 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <div class="upload-section">
+    <div class="upload-section hidden">
       <label class="file-selector-btn">
         <input id="file-selector" type="file" accept=".csv" /><img
           src="https://img.icons8.com/external-inkubators-glyph-inkubators/100/null/external-upload-file-internet-of-things-inkubators-glyph-inkubators.png"
         />
       </label>
       <button id="upload-file-btn">Upload</button>
+    </div>
+    <div class="home-page">
+      <div class="home-page-title">HomeLander</div>
+      <div class="home-page-functions">
+        <button class="function-item">BHK Type</button>
+        <button class="function-item">Sort</button>
+        <button class="function-item">Min-Max</button>
+        <button class="function-item">More Filters</button>
+      </div>
+      <div class="home-page-contents">
+        <div class="home-page-item">
+          <div class="house-img"></div>
+          <div class="house-price">100,000$</div>
+          <div class="beds-baths-sqft">2 Bds - 2 Ba - 1650 ft2</div>
+        </div>
+      </div>
     </div>
     <script type="module" src="script.js"></script>
   </body>

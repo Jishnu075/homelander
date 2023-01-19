@@ -2,7 +2,7 @@ import { House } from "../model/house.js";
 
 class DataLoader {
   constructor() {
-    this.onClick = async function onClick(csvFile) {
+    this.onClick = function onClick(csvFile) {
       const input = csvFile.files[0];
       const fileReader = new FileReader();
       fileReader.onload = (event) => {

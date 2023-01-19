@@ -1,6 +1,12 @@
 "use strict";
 
-const body = document.getElementsByTagName("body");
+const uploadSection = document.querySelector(".upload-section");
+const body = document.querySelector("body");
 console.log(body);
+function removeUploadSection() {
+  uploadSection.innerHTML = "";
+}
+function addHomePageContent() {}
+addHomePageContent();
 
-
+export { removeUploadSection };

@@ -38,3 +38,60 @@ input[type="file"] {
   background-color: rgb(36, 36, 36);
   cursor: pointer;
 }
+.hidden {
+  display: none;
+}
+
+/* HomePage section */
+.home-page-title {
+  font-size: 30px;
+  text-align: center;
+  padding: 35px 0px 35px 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.home-page-functions {
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  background-color: rgb(242, 247, 255);
+  height: 50px;
+}
+.function-item {
+  cursor: pointer;
+  display: flex;
+  border: 1px solid rgb(211, 211, 211);
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  height: 30px;
+  margin: 10px;
+  width: 90px;
+}
+.home-page-contents {
+  padding: 30px;
+  /* background-color: green; */
+}
+
+.home-page-item {
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid black;
+  width: 230px;
+}
+.house-img {
+  border-radius: 5px;
+  height: 160px;
+  margin: 20px;
+  background-color: rgb(160, 189, 214);
+}
+.house-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+.beds-baths-sqft {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
