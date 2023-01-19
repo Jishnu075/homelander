@@ -5,6 +5,6 @@ const uploadBtn = document.getElementById("upload-file-btn");
 const csvFile = document.getElementById("file-selector");
 uploadBtn.addEventListener("click", () => {
   const dataloader = new DataLoader();
-  const houseList = dataloader.onClick(csvFile);
-  console.log(houseList, 1234);
+  dataloader.onClick(csvFile);
+  // console.log(JSON.parse(localStorage.data));
 });

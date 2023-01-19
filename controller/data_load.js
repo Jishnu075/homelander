@@ -2,13 +2,14 @@ import { House } from "../model/house.js";
 
 class DataLoader {
   constructor() {
-    this.onClick = function onClick(csvFile) {
+    this.onClick = async function onClick(csvFile) {
       const input = csvFile.files[0];
       const fileReader = new FileReader();
       fileReader.onload = (event) => {
         onLoad(event);
       };
       fileReader.readAsText(input);
+      // const addHousesToObject = (houses) => (this.houses = houses);
     };
 
     // func for onload of file
@@ -28,7 +29,7 @@ class DataLoader {
       return newArr;
     }
     // to create a list of house of obj as arr
-    function createHousesList(arr) {
+    const createHousesList = (arr) => {
       const housesArr = [];
       arr.map((x, i) => {
         const eachItem = x.split(",");
@@ -37,8 +38,10 @@ class DataLoader {
         //house to array(list of houses)
         housesArr.push(house);
       });
+      this.houses = housesArr;
+      localStorage.setItem("data", JSON.stringify(this.houses));
       return housesArr;
-    }
+    };
   }
 }
 export { DataLoader };

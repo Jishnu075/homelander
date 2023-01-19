@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+}
+.upload-section {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+input[type="file"] {
+  display: none;
+}
+.file-selector-btn {
+  margin: 15px;
+  display: flex;
+  cursor: pointer;
+  display: inline-block;
+  color: white;
+  background-color: white;
+  text-align: center;
+}
+#upload-file-btn {
+  color: white;
+  background-color: black;
+  width: 140px;
+  height: 40px;
+  border-radius: 20px;
+}
+#upload-file-btn:hover {
+  background-color: rgb(36, 36, 36);
+  cursor: pointer;
+}
