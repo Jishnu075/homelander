@@ -1,3 +1,5 @@
+import { addHomePageContent } from "./view/homepage/homepage_content.js";
+
 const homePageEl = document.querySelector(".home-page");
 const uploadSectionEl = document.querySelector(".upload-section");
 
@@ -8,5 +10,6 @@ function showUploadPage() {
 function showHomePage() {
   uploadSectionEl.style.visibility = "hidden";
   homePageEl.classList.remove("hidden");
+  addHomePageContent();
 }
 export { showUploadPage, showHomePage };

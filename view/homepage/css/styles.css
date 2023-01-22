@@ -69,11 +69,16 @@ input[type="file"] {
   width: 90px;
 }
 .home-page-contents {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   padding: 30px;
   /* background-color: green; */
 }
 
 .home-page-item {
+  margin-right: 20px;
+  margin-bottom: 40px;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -95,3 +100,23 @@ input[type="file"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+/* filter section  */
+.filter-price {
+  width: 200px;
+  height: 100px;
+}
+input {
+  display: block;
+  margin: 5px;
+}
+/* .range {
+  appearance: none;
+  width: 50%;
+  height: 10px;
+  max-width: 400px;
+}
+.range::-webkit-slider-thumb {
+  /* appearance: none; */
+/* height: 10px;
+} */
