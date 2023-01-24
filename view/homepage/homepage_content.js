@@ -8,23 +8,6 @@ const filterPriceBtn = document.querySelector("#filter-price-btn");
 const searchBtn = document.querySelector("#search-btn");
 const resetFilterBtn = document.querySelector("#reset-btn");
 
-// to add homePage content based on data provided or goes with default(all data )
-function addHomePageContent(houseData = getEachHouseData()) {
-  homePageContents.innerHTML = "";
-  Object.entries(houseData).forEach((entry) => {
-    const [key, value] = entry;
-    const html = `
-    <div class="home-page-item">
-      <div class="house-img"></div>
-      <div class="house-price">${value["price"] * 10000} $</div>
-      <div class="beds-baths-sqft">${value["beds"]} Bds - ${
-      value["baths"]
-    } Ba - ${value["sqft"]} ft2</div>
-  </div>`;
-    homePageContents.insertAdjacentHTML("beforeend", html);
-  });
-}
-
 // filter function button functionality
 filterPriceBtn.addEventListener("click", function () {
   const priceRangeSetter = document.querySelector(".filter-price");
@@ -50,6 +33,23 @@ searchBtn.addEventListener("click", function () {
 resetFilterBtn.addEventListener("click", () => {
   addHomePageContent();
 });
+
+// to add homePage content based on data provided or goes with default(all data )
+function addHomePageContent(houseData = getEachHouseData()) {
+  homePageContents.innerHTML = "";
+  Object.entries(houseData).forEach((entry) => {
+    const [key, value] = entry;
+    const html = `
+    <div class="home-page-item">
+      <div class="house-img"></div>
+      <div class="house-price">${value["price"] * 10000} $</div>
+      <div class="beds-baths-sqft">${value["beds"]} Bds - ${
+      value["baths"]
+    } Ba - ${value["sqft"]} ft2</div>
+  </div>`;
+    homePageContents.insertAdjacentHTML("beforeend", html);
+  });
+}
 
 function createFilteredContentList(bedCount, minPrice, maxPrice) {
   const houseData = getEachHouseData();
