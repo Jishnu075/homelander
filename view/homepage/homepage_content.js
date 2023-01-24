@@ -2,14 +2,13 @@
 
 import { getEachHouseData } from "../../controller/data_handler.js";
 
-// const uploadSection = document.querySelector(".upload-section");
 const homePageContents = document.querySelector(".home-page-contents");
 const bedCountBtn = document.querySelector("#bed-count-btn");
 const filterPriceBtn = document.querySelector("#filter-price-btn");
 const searchBtn = document.querySelector("#search-btn");
 const resetFilterBtn = document.querySelector("#reset-btn");
-// const houseData = localStorage.data;
 
+// to add homePage content based on data provided or goes with default(all data )
 function addHomePageContent(houseData = getEachHouseData()) {
   homePageContents.innerHTML = "";
   Object.entries(houseData).forEach((entry) => {
@@ -26,7 +25,7 @@ function addHomePageContent(houseData = getEachHouseData()) {
   });
 }
 
-// bedCountBtn.addEventListener("click", function () {});
+// filter function button functionality
 filterPriceBtn.addEventListener("click", function () {
   const priceRangeSetter = document.querySelector(".filter-price");
   priceRangeSetter.classList.remove("hidden");
@@ -41,7 +40,6 @@ searchBtn.addEventListener("click", function () {
   const maxPrice =
     Number(document.querySelector("#input-number-max").value) / 10000;
 
-  //   createFilteredContentList(selectedBedCount, minPrice, maxPrice);
   addHomePageContent(
     createFilteredContentList(selectedBedCount, minPrice, maxPrice)
   );
@@ -57,22 +55,18 @@ function createFilteredContentList(bedCount, minPrice, maxPrice) {
     let isToPop = false;
     const [key, value] = entry;
     filteredData.push(value);
-    // if (
-    //   value["beds"] !== bedCount &&
-    //   value["price"] < minPrice &&
-    //   value["price"] > maxPrice
-    // ) {
-    //   isToPop = true;
-    // }
 
+    //bedcount filter
     if (value["beds"] !== bedCount) {
       isToPop = true;
     }
+    //min-price filter
     if (minPrice !== 0) {
       if (value["price"] < minPrice) {
         isToPop = true;
       }
     }
+    //max-filter filter
     if (maxPrice !== 0) {
       if (value["price"] > maxPrice) {
         isToPop = true;
@@ -84,10 +78,6 @@ function createFilteredContentList(bedCount, minPrice, maxPrice) {
       filteredData.pop(value);
     }
   });
-  console.log(filteredData);
   return filteredData;
 }
-
-// function onSearch(bedCount, minPrice, maxPrice) {}
-
 export { addHomePageContent };
