@@ -64,6 +64,10 @@ function createFilteredContentList(bedCount, minPrice, maxPrice) {
         filteredData.pop(value);
       }
     }
+    // if (!(value.price >= minPrice && value.price <= maxPrice)) {
+    //   filteredData.pop(value);
+    //   console.log("in here");
+    // }
   });
   return filteredData;
 }
