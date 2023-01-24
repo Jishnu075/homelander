@@ -7,7 +7,7 @@ const homePageContents = document.querySelector(".home-page-contents");
 const bedCountBtn = document.querySelector("#bed-count-btn");
 const filterPriceBtn = document.querySelector("#filter-price-btn");
 const searchBtn = document.querySelector("#search-btn");
-
+const resetFilterBtn = document.querySelector("#reset-btn");
 // const houseData = localStorage.data;
 
 function addHomePageContent(houseData = getEachHouseData()) {
@@ -45,6 +45,9 @@ searchBtn.addEventListener("click", function () {
   addHomePageContent(
     createFilteredContentList(selectedBedCount, minPrice, maxPrice)
   );
+});
+resetFilterBtn.addEventListener("click", () => {
+  addHomePageContent();
 });
 
 function createFilteredContentList(bedCount, minPrice, maxPrice) {

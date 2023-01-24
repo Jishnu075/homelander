@@ -19,29 +19,46 @@
     <div class="home-page">
       <div class="home-page-title">HomeLander</div>
       <div class="home-page-functions">
-        <button id="bed-count-btn" class="function-item">
-          <form>
-            <label> Bed Count </label>
-            <select id="bed-count-select">
-              <option value="0">none</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-        </button>
-        <span type="button" id="filter-price-btn" class="function-item">Filter by Price</span>
-        <!-- TODO add filter hidden price  -->
-        <div class="filter-price hidden ">
-          <input type="number" min="200" max="10000" step="1" id="input-number-min">
-          <input type="number" min="200" max="10000" step="1" id="input-number-max">
-       
+        <div id="bed-count-btn" class="function-item">
+        <form>
+          <label> Bed Count </label>
+          <select id="bed-count-select">
+            <option value="0">none</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
         </div>
-        <!-- <button type="button" id="price-count-btn" class="function-item">Min-Max</button> -->
-        <button type="button" id="search-btn" class="function-item">Search</button>
-      </form>
-
+          <span type="button" id="filter-price-btn" class="function-item"
+            >Filter by Price</span
+          >
+          <!-- TODO add filter hidden price  -->
+          <div class="filter-price hidden">
+            <input
+              type="number"
+              min="200"
+              max="10000"
+              step="1"
+              id="input-number-min"
+            />
+            <input
+              type="number"
+              min="200"
+              max="10000"
+              step="1"
+              id="input-number-max"
+            />
+          </div>
+          <!-- <button type="button" id="price-count-btn" class="function-item">Min-Max</button> -->
+          <button type="button" id="search-btn" class="function-item">
+            Search
+          </button>
+          <button type="button" id="reset-btn" class="function-item">
+            Reset Filter
+          </button>
+        </form>
       </div>
       <div class="home-page-contents"></div>
     </div>
