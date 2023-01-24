@@ -51,24 +51,37 @@ function createFilteredContentList(bedCount, minPrice, maxPrice) {
   const houseData = getEachHouseData();
   const filteredData = [];
   Object.entries(houseData).forEach((entry) => {
+    let isToPop = false;
     const [key, value] = entry;
     filteredData.push(value);
+    // if (
+    //   value["beds"] !== bedCount &&
+    //   value["price"] < minPrice &&
+    //   value["price"] > maxPrice
+    // ) {
+    //   isToPop = true;
+    // }
+
     if (value["beds"] !== bedCount) {
-      filteredData.pop(value);
+      isToPop = true;
     }
     if (minPrice !== 0) {
-      if (value["price"] >= maxPrice) {
-        filteredData.pop(value);
-      }
-      if (value["price"] <= minPrice) {
-        filteredData.pop(value);
+      if (value["price"] < minPrice) {
+        isToPop = true;
       }
     }
-    // if (!(value.price >= minPrice && value.price <= maxPrice)) {
-    //   filteredData.pop(value);
-    //   console.log("in here");
-    // }
+    if (maxPrice !== 0) {
+      if (value["price"] > maxPrice) {
+        isToPop = true;
+      }
+    }
+
+    // pops the value which is not needed based on the flag
+    if (isToPop) {
+      filteredData.pop(value);
+    }
   });
+  console.log(filteredData);
   return filteredData;
 }
 
