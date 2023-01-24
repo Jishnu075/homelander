@@ -9,7 +9,6 @@ class DataLoader {
         onLoad(event);
       };
       fileReader.readAsText(input);
-      // const addHousesToObject = (houses) => (this.houses = houses);
     };
 
     // func for onload of file

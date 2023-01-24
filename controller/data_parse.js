@@ -1,7 +1,5 @@
 "use strict";
 
-// let houseDataLength = stringToJson().length;
-
 // func to convert parse string to Object for using localStorage.data
 function stringToJson(localData) {
   try {

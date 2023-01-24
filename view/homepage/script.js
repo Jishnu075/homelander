@@ -3,8 +3,6 @@
 import { showHomePage, showUploadPage } from "../../page_handler.js";
 
 import { DataLoader } from "../../controller/data_load.js";
-import { addHomePageContent } from "./homepage_content.js";
-// import { removeUploadSection } from "../homepage_content.js";
 const uploadBtn = document.getElementById("upload-file-btn");
 const csvFile = document.getElementById("file-selector");
 

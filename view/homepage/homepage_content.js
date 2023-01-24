@@ -31,6 +31,7 @@ filterPriceBtn.addEventListener("click", function () {
   priceRangeSetter.classList.remove("hidden");
 });
 
+// searchButton function button functionality
 searchBtn.addEventListener("click", function () {
   const selectedBedCount = Number(
     document.querySelector("#bed-count-select").value
@@ -44,6 +45,8 @@ searchBtn.addEventListener("click", function () {
     createFilteredContentList(selectedBedCount, minPrice, maxPrice)
   );
 });
+
+// reset-filter function button functionality
 resetFilterBtn.addEventListener("click", () => {
   addHomePageContent();
 });
